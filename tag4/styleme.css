@@ -1,0 +1,26 @@
+
+@font-face {
+    font-family: t;
+    src: url("/process/font/Plume-Free-Brush-Font.otf");
+}
+
+h1{
+    font-family:'t';
+    font-size: 18px;
+    color: rgb(226, 208, 43);
+}
+
+.block{
+padding: 25px;
+border: 8px;
+}
+.lala{
+    background-color: black;
+    margin: 50px;
+}
+.button1{
+    display:inline;
+    padding: 200px 80px;
+    text-align: left;
+    background-color: rgb(99, 23, 134);
+}
