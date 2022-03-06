@@ -14,8 +14,11 @@ h1{
 h2{
     font-family:'t';
     font-size: 80px;
+    color: rgb(141, 115, 214);
     text-align: center;
-    border: 3px solid rgb(47, 30, 68);
+    border: 3px solid rgb(115, 92, 197);	
+    padding:10px;	
+    box-shadow:	5px 10px 8px 10px rgb(114, 125, 202);	
 
 }
 p{
