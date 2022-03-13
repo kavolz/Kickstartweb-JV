@@ -1,0 +1,45 @@
+body{
+    margin: 0px;
+}
+.container{
+margin: 100px;
+    border: 3px solid cornflowerblue;
+    background-color: rgb(252, 251, 196);
+}
+h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 80px;
+    
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1rem;
+   
+}
+.box{
+ 
+    border: 5px solid rgb(115, 92, 197);	
+    margin: 10px 10px 10px 10px;
+    display: inline-block;
+
+}
+.box2{
+    border: 5px solid rgb(131, 75, 136);	
+    margin: 100px 100px 100px 100px ;
+    display: inline-block;
+}
+.box3{
+    position: relative;
+   height: 700px;
+}
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 60px ;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2em;
+}
