@@ -41,6 +41,13 @@
         font-size: 14px;
         color: rgb(255, 255, 255);
     }
+    a{
+        font-family: mono;
+        font-size: 24px;
+        color: rgb(255, 255, 255);
+        display: block;
+        padding: 30%;
+    }
 body{
     background-color: black;
 }
