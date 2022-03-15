@@ -1,0 +1,136 @@
+@font-face {
+    font-family: plume;
+    src: url("/process/font/Plume-Free-Brush-Font.otf");
+    }
+    @font-face {
+        font-family: mono;
+        src: url("/process/font/VCR_OSD_MONO_1.001.ttf");
+    }
+    h1{
+        font-family: plume;
+        font-size: 300px;
+        color: rgb(255, 255, 255);
+        margin: 0%;
+    }
+    h2{
+        font-family: plume;
+        font-size: 260px; 
+        color: rgb(255, 255, 255); 
+        margin: 0%;
+    }
+    h3{
+        font-family: plume;
+        font-size: 120px;
+        color: rgb(255, 255, 255);  
+        margin: 0%;
+    }
+    h4{
+        font-family: plume;
+        font-size: 100px;
+        color: rgb(255, 255, 255);
+        margin: 0%;  
+    }
+    h5{
+        font-family: plume;
+        font-size: 64px;
+        color: rgb(255, 255, 255); 
+        margin: 0%; 
+    }
+    p{
+        font-family: mono;
+        font-size: 14px;
+        color: rgb(255, 255, 255);
+    }
+    a{
+        font-family: mono;
+        font-size: 24px;
+        color: rgb(255, 255, 255);
+        display: block;
+        padding: 30%;
+    }
+body{
+    background-color: black;
+}
+.container{
+  min-height: 100vh;
+  width: 100vw;
+  margin: 30% 0% 30% 0%;
+}
+.centerB{
+    margin: auto;
+    text-align: center;
+
+   
+}
+.top{
+    padding: 20% 0% 5% 0% ;
+    white-space: nowrap;
+}
+.bottom{
+    padding: 2% 0% 2% 0% ;
+    white-space: nowrap;
+}
+.bottomC{
+    padding: 0% 0% 5% 0% ;
+    text-align: center;
+}
+.rotatet{
+    transform: rotate(270deg);
+}
+
+.box1{
+    width: 0%;
+    height:0%;
+display: inline-block;
+}
+.box2{
+   transform: rotate(90deg);
+   width: 30%; 
+   height: 10%;
+   display: inline-block;
+}
+.box3{
+    width: 50%;
+    height: 20%;
+    display: inline-block;
+
+}
+.box4{
+    transform: rotate(90deg);
+    width: 103%;
+    height: 97%;
+    display: inline-block;
+}
+.blockdeg90{
+ height: 100%;
+ transform: rotate(270deg);
+ white-space: nowrap;
+ display: inline-block;
+
+}
+.blockdeg{
+ height: 100%;
+ width: 90%;
+ transform: rotate(270deg);
+ 
+}
+.blockLeftTop{
+   text-align: left; 
+  
+}
+.blockLeftTop2{
+    text-align: left; 
+    padding: 0% 0% 4% 15%;
+ }
+ .blockLeftTop3{
+    text-align: left; 
+    padding: 0% 0% 4% 25%;
+ }
+ .left{
+     text-align: left;
+  padding-top: 20%;
+ }
+ .right{
+text-align: right;
+padding-top: 20%; 
+ }

@@ -1,0 +1,23 @@
+@font-face {
+    font-family: plume;
+    src: url("/process/font/Plume-Free-Brush-Font.otf");
+}
+h1{
+    font-family: plume;
+    font-size: 60px;
+    color: beige;
+    transition-property: all;
+}
+.box{
+    width: 250px;
+    height: 250px;
+    background-color: blueviolet;
+    transition-property: all;
+    transition-duration: 6s;
+    transition-timing-function: linear;
+}
+.box:hover{
+    background-color: rgb(226, 198, 43);
+    color: black;
+    
+}
