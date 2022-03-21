@@ -11,6 +11,9 @@
         font-size: 300px;
         color: rgb(255, 255, 255);
         margin: 0%;
+     transition-property: all;	
+     transition-duration: 1s;
+     transition-timing-function: linear;
     }
     h2{
         font-family: plume;
@@ -51,10 +54,28 @@
 body{
     background-color: black;
 }
+.containerFlex{
+display: flex;
+flex-direction: row;
+justify-content: left space-evenly;
+flex-wrap: nowrap;
+height: 100vh;
+width: 100vw;
+margin: 10% 0% 10% 0%;
+}
+
+
+.item{
+    rotate: 90deg;
+}
 .container{
   min-height: 100vh;
   width: 100vw;
-  margin: 30% 0% 30% 0%;
+  margin: 10% 0% 10% 0%;
+}
+.containerklein{
+    position: relative;
+    
 }
 .centerB{
     margin: auto;
@@ -76,13 +97,16 @@ body{
 }
 .rotatet{
     transform: rotate(270deg);
+    display: inline-block;
+    position: relative;
+    left: 12%;
 }
 
 .box1{
     width: 0%;
     height:0%;
-display: inline-block;
 }
+    
 .box2{
    transform: rotate(90deg);
    width: 30%; 
@@ -90,19 +114,34 @@ display: inline-block;
    display: inline-block;
 }
 .box3{
-    width: 50%;
-    height: 20%;
-    display: inline-block;
-
+    position: relative;
+    left: 44%;
+    
 }
+
 .box4{
     transform: rotate(90deg);
     width: 103%;
     height: 97%;
     display: inline-block;
 }
+.blockdeg90 h4 {
+    position: absolute;
+
+}
+
+.second {}
+
+.third {}
+
+.forth {}
+
+.fifth {}
 .blockdeg90{
- height: 100%;
+position: relative;
+ height: auto;
+ width: 100%;
+ left: -50%;
  transform: rotate(270deg);
  white-space: nowrap;
  display: inline-block;
@@ -133,4 +172,20 @@ display: inline-block;
  .right{
 text-align: right;
 padding-top: 20%; 
+ }
+
+ h1:hover{
+     color: rgb(0, 0, 0);
+     
+ }
+ .effectFächer{
+     position: absolute;
+     transform: rotate(270deg);
+     font-family: plume;
+        font-size: 100px;
+        color: rgb(255, 255, 255);
+        margin: 0%; 
+ }
+ .effectFächer:hover{
+
  }
