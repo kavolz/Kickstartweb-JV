@@ -6,37 +6,29 @@
         font-family: mono;
         src: url("/process/font/VCR_OSD_MONO_1.001.ttf");
     }
-    h1{
-        font-family: plume;
-        font-size: 600px;
-        color: rgb(255, 255, 255);
-        margin: 0%;
-     transition-property: all;	
-     transition-duration: 1s;
-     transition-timing-function: linear;
-    }
+  
     h2{
         font-family: plume;
         font-size: 260px; 
-        color: rgb(255, 255, 255); 
+        color: rgb(255, 249, 249);  
         margin: 0%;
     }
     h3{
         font-family: plume;
         font-size: 120px;
-        color: rgb(255, 255, 255);  
+        color: rgb(255, 254, 254);  
         margin: 0%;
     }
     h4{
         font-family: plume;
         font-size: 100px;
-        color: rgb(255, 255, 255);
+        color: rgb(255, 253, 253);  
         margin: 0%;  
     }
     h5{
         font-family: plume;
         font-size: 64px;
-        color: rgb(255, 255, 255); 
+        color: rgb(255, 253, 253);  
         margin: 0%; 
     }
     p{
@@ -174,15 +166,6 @@ padding-top: 30%;
 }
 
 
-.blockdeg90{
-position: relative;
- height: auto;
- width: 100%;
- left: -50%;
- transform: rotate(270deg);
- display: inline-block;
-
-}
 
 .blockdeg{
  transform: rotate(270deg);
@@ -194,14 +177,21 @@ position: relative;
     display: inline-block;
   
    }
+   .blogdeg3{
+    transform: rotate(270deg);
+    display: inline-block;
+    height: 60%;
+   }
 .blockLeftTop{
-    margin-top: 1%;
+   padding: 3% 0% 1% 6%;
    text-align: left; 
+   display: inline-block;
   
 }
 .blockLeftTop2{
     text-align: left; 
     padding: 0% 0% 4% 15%;
+    display: inline-block;
  }
  .blockLeftTop3{
     text-align: left; 
@@ -220,10 +210,44 @@ text-align: right;
 
 /* animation*/
 
- h1:hover{
-     color: rgb(0, 0, 0);
-     
- }
+
+/*FadeAnimation*/
+h1{
+    font-family: plume;
+    font-size: 600px;
+    color: rgb(240, 240, 240);
+    margin: 0%;
+    transition: 1s ease-in ;
+    animation: fade 1s ease-in forwards 1;
+}
+
+
+ @keyframes	fade {
+    100%{
+        color: black;
+    }
+  
+}
+
+.textA{
+    font-family: plume;
+    font-size: 90px;
+    color: rgb(255, 255, 255);
+    text-align: center;  
+    display: inline-block;
+    transition: all;
+    animation: Bigger 1s ease-in-out infinite alternate;
+    
+}
+@keyframes Bigger {
+    100%{
+        font-size: 290px;
+        color: rgb(247, 247, 247,50);  
+    }
+}
+
+
+/*Fächer animation*/
  .effectFächer p {
      position: absolute;
      white-space: nowrap;
@@ -233,7 +257,7 @@ text-align: right;
      font-family: mono;
         font-size: 100px;
         color: rgb(255, 255, 255);
-        margin: 0%; 
+        padding: 3%;
       transform: translateY(0%);
  }
  
@@ -253,19 +277,22 @@ text-align: right;
 
 }
 
+
+/*Broken Window*/
 .leftA{
 
 width: 37%;
 height: 22%;
- transition: transform 1s ease-in ;
+ transition: transform 2s ease-in-out; ;
+ animation: left-to-right 4s cubic-bezier(0, -1.03, 1, 2.11) infinite alternate
 }
 .rightA{
     
     text-align: right;
     height: 22%;
-    transition: transform 1s ease-in ;
-
-
+    transition: transform 1s ease-in-out ;
+    animation: right-to-left 4s cubic-bezier(0, -1.03, 1, 2.11)  infinite alternate;
+    
 }
 .container:hover .leftA{
     animation: left-to-right 1s ease-in forwards;
@@ -278,18 +305,27 @@ height: 22%;
     0%{
         transform: translate(0%);
     }
-    100%{
+    50%{
             transform: translateX(100%);
+    }
+    100%{
+        transform: translate(0%);
     }
 }
 @keyframes right-to-left {
     0%{
         transform:translateX(100%) ;
     }
-    100%{
+    50%{
         transform: translateX(0%);
     }
+    100%{
+        transform:translateX(100%) ;
+        color: black;
+    }
 }
+
+
 
 
 
