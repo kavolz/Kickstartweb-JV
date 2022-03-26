@@ -8,7 +8,7 @@
     }
     h1{
         font-family: plume;
-        font-size: 300px;
+        font-size: 600px;
         color: rgb(255, 255, 255);
         margin: 0%;
      transition-property: all;	
@@ -55,41 +55,59 @@ body{
     background-color: black;
 }
 .containerFlex{
-display: flex;
-flex-direction: row;
-justify-content: left space-evenly;
-flex-wrap: nowrap;
 height: 100vh;
-width: 100vw;
+max-width: 100vw;
+display: flex;
+align-items: space-evenly;
 margin: 10% 0% 10% 0%;
 }
 
 
-.item{
-    rotate: 90deg;
+.contentrotate{
+    transform: rotate(90deg);
+    white-space: nowrap;
+    display: inline-block;
+    max-width: 200px;
+    
+    
 }
+/* Container*/
 .container{
-  min-height: 100vh;
-  width: 100vw;
-  margin: 10% 0% 10% 0%;
+    height: 100vh;
+    width: 100vw;
 }
-.containerklein{
+.containerk{
+    height: 40vh;
+    width: 100vw;
+
+}
+.containerk2{
+    height: 10vh;
+    width: 100vw;
+
+}
+.containerR{
     position: relative;
+    min-height: 100vh;
+    max-width: 100vw;
+    margin: 0%
     
 }
 .centerB{
-    margin: auto;
     text-align: center;
-
-   
+    white-space: nowrap;
 }
+/* Positions*/
 .top{
-    padding: 20% 0% 5% 0% ;
+    padding: 20% 0% 15% 0% ;
     white-space: nowrap;
 }
 .bottom{
     padding: 2% 0% 2% 0% ;
     white-space: nowrap;
+}
+.bottoma{
+    padding: 2% 0% 2% 0% ;
 }
 .bottomC{
     padding: 0% 0% 5% 0% ;
@@ -99,13 +117,33 @@ margin: 10% 0% 10% 0%;
     transform: rotate(270deg);
     display: inline-block;
     position: relative;
+    
+}
+.rotatet2 {
+    transform: rotate(270deg);
+    display: inline-block;
+    position: relative;
     left: 12%;
+    width: 43%;
 }
+.posAbsolutCenter{
+    position: absolute ;
+    
+}
+/* attribute*/
+.inline{
+    display: inline-block;
 
-.box1{
-    width: 0%;
-    height:0%;
 }
+.space{
+    width: 20%;
+}
+.spacetop{
+padding-top: 30%;
+}
+/*boxen*/
+.box1{}
+
     
 .box2{
    transform: rotate(90deg);
@@ -115,45 +153,49 @@ margin: 10% 0% 10% 0%;
 }
 .box3{
     position: relative;
-    left: 44%;
+  display: inline-block;
     
 }
 
 .box4{
     transform: rotate(90deg);
-    width: 103%;
-    height: 97%;
+    width: 114%;
+    height: 136%;
     display: inline-block;
+}
+.box5{
+ transform: rotate(90deg);
+  width: 20%;
+  display: inline-block;
 }
 .blockdeg90 h4 {
     position: absolute;
 
 }
 
-.second {}
 
-.third {}
-
-.forth {}
-
-.fifth {}
 .blockdeg90{
 position: relative;
  height: auto;
  width: 100%;
  left: -50%;
  transform: rotate(270deg);
- white-space: nowrap;
  display: inline-block;
 
 }
+
 .blockdeg{
- height: 100%;
- width: 90%;
  transform: rotate(270deg);
- 
+ display: inline-block;
+ height: 103%;
 }
+.blockdeg2{
+    transform: rotate(270deg);
+    display: inline-block;
+  
+   }
 .blockLeftTop{
+    margin-top: 1%;
    text-align: left; 
   
 }
@@ -167,25 +209,87 @@ position: relative;
  }
  .left{
      text-align: left;
-  padding-top: 20%;
+  
  }
  .right{
 text-align: right;
-padding-top: 20%; 
+
  }
+
+
+
+/* animation*/
 
  h1:hover{
      color: rgb(0, 0, 0);
      
  }
+ .effectFächer p {
+     position: absolute;
+     white-space: nowrap;
+ }
  .effectFächer{
      position: absolute;
-     transform: rotate(270deg);
-     font-family: plume;
+     font-family: mono;
         font-size: 100px;
         color: rgb(255, 255, 255);
         margin: 0%; 
+      transform: translateY(0%);
  }
- .effectFächer:hover{
+ 
+ .effectFächer:hover p:nth-child(1){
+    transform: translateY(5%);
+ }
 
+ .effectFächer:hover p:nth-child(2){
+    transform: translateY(10%);
  }
+ .effectFächer:hover p:nth-child(3){
+    transform: translateY(15%);
+ }
+
+ .effectFächer:hover p:nth-child(4){
+    transform: translateY(20%);
+
+}
+
+.leftA{
+
+width: 37%;
+height: 22%;
+ transition: transform 1s ease-in ;
+}
+.rightA{
+    
+    text-align: right;
+    height: 22%;
+    transition: transform 1s ease-in ;
+
+
+}
+.container:hover .leftA{
+    animation: left-to-right 1s ease-in forwards;
+}
+.container:hover .rightA{
+    animation: right-to-left 1s ease-in forwards;
+}
+
+@keyframes	left-to-right {
+    0%{
+        transform: translate(0%);
+    }
+    100%{
+            transform: translateX(100%);
+    }
+}
+@keyframes right-to-left {
+    0%{
+        transform:translateX(100%) ;
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+
+
