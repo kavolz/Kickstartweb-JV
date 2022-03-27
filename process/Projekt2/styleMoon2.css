@@ -65,6 +65,7 @@ margin: 10% 0% 10% 0%;
 }
 /* Container*/
 .container{
+    position: relative;
     height: 100vh;
     width: 100vw;
 }
@@ -116,7 +117,7 @@ margin: 10% 0% 10% 0%;
     display: inline-block;
     position: relative;
     left: 12%;
-    width: 43%;
+    width: 46%;
 }
 .posAbsolutCenter{
     position: absolute ;
@@ -218,7 +219,10 @@ h1{
     color: rgb(240, 240, 240);
     margin: 0%;
     transition: 1s ease-in ;
-    animation: fade 1s ease-in forwards 1;
+    
+}
+.h1Animation{
+    animation: fade 2.5s ease-in forwards ;  
 }
 
 
@@ -236,15 +240,52 @@ h1{
     text-align: center;  
     display: inline-block;
     transition: all;
-    animation: Bigger 1s ease-in-out infinite alternate;
-    
+    animation: Bigger 1s ease-in-out  alternate;
+ 
 }
+
+.textAnimation{
+    animation: Bigger 1s ease-in-out  alternate;
+}
+
+
 @keyframes Bigger {
     100%{
         font-size: 290px;
         color: rgb(247, 247, 247,50);  
     }
 }
+
+
+.textA2{
+    font-family: plume;
+        font-size: 100px;
+        color: rgb(255, 253, 253);  
+        padding: 20% 0% 15% 0% ;
+        text-align: center;
+        white-space: nowrap;
+        animation: blink-animation 0.5s steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+  .textA3{
+    font-family: mono;
+    font-size: 100px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    animation: big-to-small 1s ease-in-out infinite alternate;
+
+  }
+  @keyframes big-to-small{
+      100%{
+          font-size: 8px;
+      }
+  }
+
 
 
 /*Fächer animation*/
@@ -279,26 +320,25 @@ h1{
 
 
 /*Broken Window*/
-.leftA{
 
+.leftA{
 width: 37%;
 height: 22%;
- transition: transform 2s ease-in-out; ;
- animation: left-to-right 4s cubic-bezier(0, -1.03, 1, 2.11) infinite alternate
+ transition: transform 2s ease-in-out; 
+
 }
+.leftAnimation{
+    animation: left-to-right 4s cubic-bezier(0, -1.03, 1, 2.11)  alternate;
+}
+
 .rightA{
-    
     text-align: right;
     height: 22%;
-    transition: transform 1s ease-in-out ;
-    animation: right-to-left 4s cubic-bezier(0, -1.03, 1, 2.11)  infinite alternate;
-    
+    transition: transform 1s ease-in-out ;   
 }
-.container:hover .leftA{
-    animation: left-to-right 1s ease-in forwards;
-}
-.container:hover .rightA{
-    animation: right-to-left 1s ease-in forwards;
+
+.rightAnimation{
+    animation: right-to-left 4s cubic-bezier(0, -1.03, 1, 2.11)  alternate;
 }
 
 @keyframes	left-to-right {
@@ -315,6 +355,7 @@ height: 22%;
 @keyframes right-to-left {
     0%{
         transform:translateX(100%) ;
+        color: rgb(255, 255, 255);
     }
     50%{
         transform: translateX(0%);
@@ -325,6 +366,12 @@ height: 22%;
     }
 }
 
+/*
+
+@media only screen and (max-width: 800px) {
+   
+}
+*/
 
 
 

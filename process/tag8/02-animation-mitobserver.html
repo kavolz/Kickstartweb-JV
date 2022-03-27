@@ -56,6 +56,7 @@
     <script>
         // Element auswählen, das beobachtet werden soll, es können auch mehrere sein
         let target = document.querySelector('#box');
+        let target2 = document.querySelector('#bo2x');
         let observer;
 
         let options = {
@@ -66,18 +67,26 @@
         //threshold gibt an, in welchen Schritten eine Aenderung beobachtet werden soll, hier bei 0, 25, 50, 75 und 100%
 
         window.addEventListener("load", (event) => {
+
             observer = new IntersectionObserver(handleIntersect, options);
             observer.observe(target);
+            observer.observe(target2);
         });
 
         function handleIntersect(entries, observer) { //es ist ein array von entries, auch wenn bloss ein target beobachtet wird
             entries.map((entry) => {
                 if (entry.isIntersecting) {
                     if (entry.intersectionRatio >= 0.5) { //mit intersection Ratio kann man noch bestimmen, wiviel prozent sichtbar sein müssten, damit animation ausgelöst wird
+                       if(entry.target.id == "box"){
                         entry.target.classList.add('animated');
+                       }
+
                     }
                 } else {
-                    entry.target.classList.remove('animated');
+                    if( entry.target.id == "box"){
+                        entry.target.classList.remove('animated');
+                    }
+                    
                 }
             });
         }
