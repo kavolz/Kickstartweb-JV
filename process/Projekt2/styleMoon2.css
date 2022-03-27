@@ -240,12 +240,8 @@ h1{
     text-align: center;  
     display: inline-block;
     transition: all;
-    animation: Bigger 1s ease-in-out  alternate;
+    animation: Bigger 1s ease-in-out infinite  alternate;
  
-}
-
-.textAnimation{
-    animation: Bigger 1s ease-in-out  alternate;
 }
 
 
