@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Sprintstyle3.css">
+</head>
+<body>
+
+  <!---page1--> 
+<div class="container">
+    <h1 class="center H11">O O</h1>
+</div>
+
+<!---page2-->
+<div class="container">
+    <h1 class="H12 center"> two </h1>
+    <h1 class="H12 center"> moons </h1>
+</div>
+  
+<!---page3-->
+<div class="container">
+    <h4 class="textA2">start</h4>
+    <h2> catching </h2>
+    <h2>on fire</h2>
+    
+</div>
+
+
+
+<!---page4A-->
+<div class="Containercenter">
+     <h2 class="contentrotate">Sorry,</h2>
+              
+</div>
+
+<!--page4AA-->
+<div class="container">
+    <div class="center">
+        <h1 class="H13">please</h1>
+    </div>
+</div>
+
+<!---page4B-->
+<div class="Containercenter">
+
+    <div class="contentrotate"> <h3> excuse me</h3></div>
+        <div class="contentrotate"> <h3> for </h3></div>
+       
+</div>
+
+ <!--flex box-->
+<div class="Containercenter">   
+    <h2 class="top center">my</h2>
+    <div class="textA3">mess</div>
+</div>
+
+
+<!---page5 flex box!!einbauen--> 
+<div class="containerleft">
+  
+        <h3>My heart's </h3>
+   
+       
+        <div class="Containercenter">
+             <h3 class="contentrotate">been pouring </h3>
+                 <div class="containerbottom">
+                    <h3>through my chest</h3>
+                </div>
+        </div>
+    
+   </div>
+
+
+
+   <!---page7A-->
+   <div class="containerright">
+       <h2 class="contentrotate nowrap">I'm sorry </h2>
+       
+   </div>
+
+   <!--page7B-->
+<div class="container">
+<h1 class="H14 center">that I </h1>
+<h2 class="left">left</h2>
+</div>
+
+
+
+<!---page10-->
+    <div class="container">
+            <h3 class="left">I close my</h3>
+        
+    </div>
+
+<!---page10-->
+    <div class="containerright">
+        <h1 class="H16 contentrotate nowrap">door,</h1>
+    </div>
+
+<!--page10a-->
+<div class="container" >
+<p class="center">I'm left with less</p>
+</div>
+
+
+
+<a href="https://www.figma.com/file/WAkCCai3ngcVEfhGNVHAPU/moodboard_KickWeb?node-id=57%3A40" target="_blank"> Layoutentwurf</a>
+
+</body>
+
+<script>
+    // Element auswählen, das beobachtet werden soll, es können auch mehrere sein
+    let target = document.querySelector('.leftAndRightContainer');
+   
+    let target3 = document.querySelector('.H11');
+    let target4 = document.querySelector('.H12');
+    let target5 = document.querySelector('.H13');
+    let target6 = document.querySelector('.H14');
+    let target7 = document.querySelector('.H15');
+    let target8 = document.querySelector('.H16');
+    let target9 = document.querySelector('.H17');
+
+    let observer;
+
+    let options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: [0, 0.25, 0.5, 0.75, 1]
+    };
+    //threshold gibt an, in welchen Schritten eine Aenderung beobachtet werden soll, hier bei 0, 25, 50, 75 und 100%
+
+    window.addEventListener("load", (event) => {
+
+        observer = new IntersectionObserver(handleIntersect, options);
+        observer.observe(target);
+       
+        observer.observe(target3);
+        observer.observe(target4);
+        observer.observe(target5);
+        observer.observe(target6);
+        observer.observe(target7);
+        observer.observe(target8);
+        observer.observe(target9);
+       
+    });
+
+    function handleIntersect(entries, observer) { //es ist ein array von entries, auch wenn bloss ein target beobachtet wird
+        entries.map((entry) => {
+            if (entry.isIntersecting) {
+                if (entry.intersectionRatio >= 0.5) { //mit intersection Ratio kann man noch bestimmen, wiviel prozent sichtbar sein müssten, damit animation ausgelöst wird
+                   console.log(entry.target.tagName);
+                    if(entry.target.classList.contains("leftAndRightContainer")){
+                    entry.target.querySelector(".leftA").classList.add('leftAnimation');
+                    entry.target.querySelector(".rightA").classList.add('rightAnimation');
+                   }
+                    if(entry.target.tagName == "H1"){
+                    entry.target.classList.add('h1Animation');
+                   }
+
+                }
+            } else {
+                
+                if(entry.target.classList.contains("leftAndRightContainer")){
+                    entry.target.querySelector(".leftA").classList.remove('leftAnimation');
+                    entry.target.querySelector(".rightA").classList.remove('rightAnimation');
+                    
+                }
+                 if(entry.target.tagName == "H1"){
+                    entry.target.classList.remove('h1Animation');
+                    
+                }
+                
+            }
+        });
+    }
+</script>
+</html> 
