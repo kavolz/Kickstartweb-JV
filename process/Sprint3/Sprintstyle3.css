@@ -4,12 +4,20 @@
     }
     @font-face {
         font-family: mono;
-        src: url("/process/font/VCR_OSD_MONO_1.001.ttf");
+        font-display:block;
+        src: url("/process/font/VCR_OSD_MONO_1.001.ttf") format("ttf");
     }
   
+    .E{
+        font-family: plume;
+        font-size: 580px;
+        color: rgb(240, 240, 240);
+        margin: 0%;  
+        cursor: pointer; 
+    }
     h2{
         font-family: plume;
-        font-size: 260px; 
+        font-size: 240px; 
         color: rgb(255, 249, 249);  
         margin: 0%;
     }
@@ -25,12 +33,7 @@
         color: rgb(255, 253, 253);  
         margin: 0%;  
     }
-    h5{
-        font-family: plume;
-        font-size: 64px;
-        color: rgb(255, 253, 253);  
-        margin: 0%; 
-    }
+    
     p{
         font-family: mono;
         font-size: 14px;
@@ -38,49 +41,55 @@
     }
     a{
         font-family: mono;
-        font-size: 24px;
+        font-size: 14px;
         color: rgb(255, 255, 255);
         display: block;
         padding: 30%;
     }
+    .textR{
+        font-family: mono;
+        font-size: 14px;
+        color: rgb(255, 255, 255);
+    }
+
+    
 body{
     background-color: black;
 }
 
+/* FlexContainer*/
 .Containercenter{
-min-height: 100vh;
-max-width: 100vw;
+max-width: 100%;
 display: flex;
 align-items: center;
 justify-content: center;
 flex-wrap: wrap;
-
-
 }
+
 .containerleft{
-min-height: 100vh;
-max-width: 100vw;
+max-width: 100%;
 display: flex;
 align-items: left;
 flex-wrap: wrap;
+margin: 5%;
 
 
 }
 .containerright{
-    min-height: 100vh;
-    max-width: 100vw;
+    /*max-width: 100%;*/
     display: flex;
     justify-content: end;
     flex-wrap: wrap;
+    margin: 5%;
      
     }
 
 .containerbottom{
-min-height: 100vh;
-max-width: 100vw;
+
 display: flex;
 align-items: flex-end;
 flex-wrap: wrap;
+padding-top: 10%;
 
     }
 
@@ -92,30 +101,23 @@ flex-wrap: wrap;
 /* Container*/
 .container{
     position: relative;
-    min-height: 100vh;
-    max-width: 100vw;
+    max-width: 100%;
 }
 
-.containerR{
-    position: relative;
-    min-height: 100vh;
-    max-width: 100vw;
-    margin: 0%
-    
-}
+
 
 /* Positions*/
 .center{
     text-align: center;
-    white-space: nowrap;
     display: block;
 }
 .top{
     padding: 20% 0% 15% 0% ;
-    white-space: nowrap;
+    
 }
 
 .left{
+    padding-left: 7%;
     text-align: left;
  
 }
@@ -128,74 +130,19 @@ text-align: right;
 
 .rotatet{
     writing-mode: vertical-rl;
-    display: inline-block;
+    display: inline-block; 
     position: relative;
     
 }
  .nowrap{
      white-space: nowrap;
  }
-
-
-
-/*boxen*/
-.box1{}
-
-    
-.box2{
-   transform: rotate(90deg);
-   width: 30%; 
-   height: 10%;
-   display: inline-block;
+.padding{
+    padding-bottom: 10%;
 }
-.box3{
-    position: relative;
-  display: inline-block;
-    
+.padding2{
+    padding-bottom: 35%;
 }
-
-.box4{
-    transform: rotate(90deg);
-    width: 114%;
-    height: 136%;
-    display: inline-block;
-}
-.box5{
- transform: rotate(90deg);
-  width: 20%;
-  display: inline-block;
-}
-
-.blockdeg{
- transform: rotate(270deg);
- display: inline-block;
- height: 103%;
-}
-.blockdeg2{
-    transform: rotate(270deg);
-    display: inline-block;
-  
-   }
-   .blogdeg3{
-    transform: rotate(270deg);
-    display: inline-block;
-    height: 60%;
-   }
-.blockLeftTop{
-   padding: 3% 0% 1% 6%;
-   text-align: left; 
-   display: inline-block;
-  
-}
-.blockLeftTop2{
-    text-align: left; 
-    padding: 0% 0% 4% 15%;
-    display: inline-block;
- }
- .blockLeftTop3{
-    text-align: left; 
-    padding: 0% 0% 4% 25%;
- }
 
 
 
@@ -205,7 +152,7 @@ text-align: right;
 /*FadeAnimation*/
 h1{
     font-family: plume;
-    font-size: 600px;
+    font-size: 560px;
     color: rgb(240, 240, 240);
     margin: 0%;
     transition: 1s ease-in ;
@@ -249,7 +196,6 @@ h1{
         color: rgb(255, 253, 253);  
         padding: 20% 0% 15% 0% ;
         text-align: center;
-        white-space: nowrap;
         animation: blink-animation 0.5s steps(5, start) infinite;
 }
 
@@ -260,7 +206,7 @@ h1{
   }
   .textA3{
     font-family: mono;
-    font-size: 100px;
+    font-size: 60px;
     color: rgb(255, 255, 255);
     text-align: center;
     animation: big-to-small 1s ease-in-out infinite alternate;
@@ -274,90 +220,108 @@ h1{
 
 
 
-/*Fächer animation*/
- .effectFächer p {
-     position: absolute;
-     white-space: nowrap;
- }
- .effectFächer{
-     position: absolute;
-     font-family: mono;
-        font-size: 100px;
-        color: rgb(255, 255, 255);
-        padding: 3%;
-      transform: translateY(0%);
- }
- 
- .effectFächer:hover p:nth-child(1){
-    transform: translateY(5%);
- }
-
- .effectFächer:hover p:nth-child(2){
-    transform: translateY(10%);
- }
- .effectFächer:hover p:nth-child(3){
-    transform: translateY(15%);
- }
-
- .effectFächer:hover p:nth-child(4){
-    transform: translateY(20%);
-
-}
-
-
-/*Broken Window*/
-
 .leftA{
-width: 37%;
-height: 22%;
+text-align: left;
+transition: all;
  transition: transform 2s ease-in-out; 
-
+ 
 }
+
 .leftAnimation{
-    animation: left-to-right 4s cubic-bezier(0, -1.03, 1, 2.11)  alternate;
+    animation: left-to-right 2s cubic-bezier(0.42, 0.08, 0.61, 0.98) infinite alternate;
 }
 
-.rightA{
-    text-align: right;
-    height: 22%;
-    transition: transform 1s ease-in-out ;   
-}
 
-.rightAnimation{
-    animation: right-to-left 4s cubic-bezier(0, -1.03, 1, 2.11)  alternate;
-}
 
 @keyframes	left-to-right {
     0%{
-        transform: translate(0%);
+        transform: translate(10vw);
     }
-    50%{
-            transform: translateX(100%);
-    }
+ 
     100%{
-        transform: translate(0%);
+        transform: translate(70vw);
     }
 }
-@keyframes right-to-left {
-    0%{
-        transform:translateX(100%) ;
-        color: rgb(255, 255, 255);
+@media only screen and (max-width: 1300px) {
+    .E{
+        font-size: 500px;
     }
-    50%{
-        transform: translateX(0%);
+
+    h1{
+        font-size: 450px;
     }
-    100%{
-        transform:translateX(100%) ;
-        color: black;
+    h2{
+        font-size: 200px;
+    }
+    h3{
+        font-size: 100px;
+    
+    }
+    h4{
+        font-size: 80px;
     }
 }
 
-/*
 
-@media only screen and (max-width: 800px) {
-   
+@media only screen and (max-width: 1000px) {
+    .E{
+        font-size: 480px;
+    }
+
+    h1{
+        font-size: 300px;
+    }
+    h2{
+        font-size: 140px;
+    }
+    h3{
+        font-size: 80px;
+    
+    }
+    h4{
+        font-size: 50px;
+    }
 }
-*/
+
+
+
+@media only screen and (max-width: 700px) {
+
+    .E{
+        font-size: 300px;
+    }
+
+    h1{
+        font-size: 150px;
+    }
+    h2{
+        font-size: 80px;
+    }
+    h3{
+        font-size: 50px;
+    
+    }
+    h4{
+        font-size: 30px;
+    }
+    .textA3{
+
+        font-size: 30px;
+    }
+   p{
+       font-size: 10px;
+   }
+   .textR{
+       font-size: 10px;
+       writing-mode: vertical-rl;
+       width: 50%;
+   }
+   .ContainercenterA{
+       justify-content: flex-start;
+       align-items: flex-start;
+   }
+}
+
 
 
 

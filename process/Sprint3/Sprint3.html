@@ -8,23 +8,28 @@
     <link rel="stylesheet" href="Sprintstyle3.css">
 </head>
 <body>
+    <audio id="music">
+        <source src="/process/MP3/twomoons.mp3" type="audio/mp3"> 
+      Your browser does not support the audio element.
+      </audio> 
 
-  <!---page1--> 
+  <!---1--> 
 <div class="container">
-    <h1 class="center H11">O O</h1>
+    <div class="E center padding ">0 0</div>
 </div>
 
-<!---page2-->
+<!---2-->
 <div class="container">
     <h1 class="H12 center"> two </h1>
-    <h1 class="H12 center"> moons </h1>
+    <h1 class="H13 center"> moons </h1>
+    <div class="textR center padding">I can feel myself</div>
 </div>
   
-<!---page3-->
+<!---3-->
 <div class="container">
     <h4 class="textA2">start</h4>
     <h2> catching </h2>
-    <h2>on fire</h2>
+    <h2 class="padding2">on fire</h2>
     
 </div>
 
@@ -39,12 +44,12 @@
 <!--page4AA-->
 <div class="container">
     <div class="center">
-        <h1 class="H13">please</h1>
+        <h1 class="H14">please</h1>
     </div>
 </div>
 
 <!---page4B-->
-<div class="Containercenter">
+<div class="Containercenter ContainercenterA">
 
     <div class="contentrotate"> <h3> excuse me</h3></div>
         <div class="contentrotate"> <h3> for </h3></div>
@@ -83,8 +88,8 @@
 
    <!--page7B-->
 <div class="container">
-<h1 class="H14 center">that I </h1>
-<h2 class="left">left</h2>
+<h1 class="H15 center">that I </h1>
+<h2 class="leftA">left</h2>
 </div>
 
 
@@ -96,7 +101,7 @@
     </div>
 
 <!---page10-->
-    <div class="containerright">
+    <div class="containerleft">
         <h1 class="H16 contentrotate nowrap">door,</h1>
     </div>
 
@@ -121,7 +126,10 @@
     let target6 = document.querySelector('.H14');
     let target7 = document.querySelector('.H15');
     let target8 = document.querySelector('.H16');
-    let target9 = document.querySelector('.H17');
+    let target9 = document.querySelector('.leftA');
+
+    console.log(target9);
+     
 
     let observer;
 
@@ -132,18 +140,24 @@
     };
     //threshold gibt an, in welchen Schritten eine Aenderung beobachtet werden soll, hier bei 0, 25, 50, 75 und 100%
 
-    window.addEventListener("load", (event) => {
 
+    window.addEventListener("load", (event) => {
+        
+        document.querySelector('.E').addEventListener("click", function(){
+            document.getElementById('music').play();
+        });
+        //document.getElementById('music').muted = false;
         observer = new IntersectionObserver(handleIntersect, options);
-        observer.observe(target);
+       // observer.observe(target);
        
-        observer.observe(target3);
+        //observer.observe(target3);
         observer.observe(target4);
         observer.observe(target5);
         observer.observe(target6);
         observer.observe(target7);
         observer.observe(target8);
         observer.observe(target9);
+        
        
     });
 
@@ -151,10 +165,9 @@
         entries.map((entry) => {
             if (entry.isIntersecting) {
                 if (entry.intersectionRatio >= 0.5) { //mit intersection Ratio kann man noch bestimmen, wiviel prozent sichtbar sein müssten, damit animation ausgelöst wird
-                   console.log(entry.target.tagName);
-                    if(entry.target.classList.contains("leftAndRightContainer")){
-                    entry.target.querySelector(".leftA").classList.add('leftAnimation');
-                    entry.target.querySelector(".rightA").classList.add('rightAnimation');
+                   console.log(entry.target.classList.contains("leftA"));
+                    if(entry.target.classList.contains("leftA")){
+                    entry.target.classList.add('leftAnimation');
                    }
                     if(entry.target.tagName == "H1"){
                     entry.target.classList.add('h1Animation');
@@ -163,9 +176,8 @@
                 }
             } else {
                 
-                if(entry.target.classList.contains("leftAndRightContainer")){
-                    entry.target.querySelector(".leftA").classList.remove('leftAnimation');
-                    entry.target.querySelector(".rightA").classList.remove('rightAnimation');
+                if(entry.target.classList.contains("leftA")){
+                    entry.target.classList.remove('leftAnimation');
                     
                 }
                  if(entry.target.tagName == "H1"){
