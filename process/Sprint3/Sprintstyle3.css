@@ -1,11 +1,11 @@
 @font-face {
     font-family: plume;
+    
     src: url("/process/font/Plume-Free-Brush-Font.otf");
     }
     @font-face {
         font-family: mono;
-        font-display:block;
-        src: url("/process/font/VCR_OSD_MONO_1.001.ttf") format("ttf");
+        src: url("/process/font/VCR_OSD_MONO_1.001.ttf");
     }
   
     .E{
