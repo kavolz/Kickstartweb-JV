@@ -1,11 +1,29 @@
 @font-face {
     font-family: plume;
-    
+
     src: url("/process/font/Plume-Free-Brush-Font.otf");
     }
     @font-face {
         font-family: mono;
         src: url("/process/font/VCR_OSD_MONO_1.001.ttf");
+    }
+    .menu{
+        max-width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: black;
+
+    }
+    .menu a{
+        padding: 50px;
+
+    }
+    .M{
+        font-family: mono;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+
+    
     }
   
     .E{
